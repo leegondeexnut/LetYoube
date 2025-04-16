@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    background: #ffffff; /* Changed to white for a clean background */
+    color: #333333; /* Changed to dark gray for better readability */
+}
+header {
+    background-color: #004080; /* Changed to a dark blue for a professional look */
+    color: #ffffff; /* White text for contrast */
+    padding: 2rem;
+    text-align: center;
+}
+main {
+    padding: 2rem;
+}
+section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Changed to a subtle shadow */
+    max-width: 600px;
+    margin: 0 auto;
+}
+footer {
+    background: #f0f0f0; /* Light gray for a neutral footer */
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    margin-top: 2rem;
+}
+function showTripDetails(planName) {
+    // Trip details data (you can replace this with data from a server or database)
+    const tripDetails = {
+        "Explore Bhutan": "This 7-day guided tour takes you through the serene beauty of Bhutan, including visits to monasteries, valleys, and cultural landmarks.",
+        "Adventure in the Himalayas": "Experience thrilling adventures in the Himalayan mountains, including trekking, camping, and breathtaking views."
+    };
+
+    // Get the trip details content
+    const detailsContent = document.getElementById("details-content");
+    detailsContent.innerHTML = `<p>${tripDetails[planName]}</p>`;
+    detailsContent.style.backgroundColor = "#f9f9f9"; /* Light gray for a subtle background */
+    detailsContent.style.color = "#333333"; /* Dark gray for readability */
+    detailsContent.style.padding = "1rem"; /* Add padding for better spacing */
+    detailsContent.style.borderRadius = "10px"; /* Match section styling */
+    detailsContent.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.2)"; /* Subtle shadow for consistency */
+
+    // Show the trip details section and hide the trip plans section
+    document.querySelector("section:nth-of-type(1)").style.display = "none"; // Hide trip plans
+    document.getElementById("trip-details").style.display = "block"; // Show trip details
+}
+
+function goBack() {
+    // Hide the trip details section and show the trip plans section
+    document.getElementById("trip-details").style.display = "none"; // Hide trip details
+    document.querySelector("section:nth-of-type(1)").style.display = "block"; // Show trip plans
+}

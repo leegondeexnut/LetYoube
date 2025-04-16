@@ -1,0 +1,53 @@
+<!-- filepath: c:\Users\trekk\OneDrive\Desktop\shit\home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Letyoube</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Letyoube</h1>
+        <p>Space to discover yourself</p>
+        <nav>
+            <a href="home.html">Home</a> |
+            <a href="index.html">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Letyoube</h2>
+            <p>Explore our trip plans and discover the beauty of Bhutan.</p>
+        </section>
+
+        <section>
+            <h2>Trip Plans</h2>
+            <div class="trip-plan">
+                <h3>Eastern Bhutan: Explore Bhutan</h3>
+                <div class="image-section">
+                    <img src="css/CHIMMI.jpg" alt="Explore Bhutan" />
+                </div>
+                <p>Discover the serene beauty of Bhutan with this 7-day guided tour.</p>
+                <button onclick="handlePlanClick('Explore Bhutan')">View Plan</button>
+            </div>
+            <div class="trip-plan">
+                <h3>Natural: Adventure in the Himalayas</h3>
+                <div class="image-section">
+                    <img src="css/Tsho.jpg" alt="Adventure in the Himalayas" />
+                </div>
+                <p>Experience thrilling adventures in the Himalayan mountains.</p>
+                <button onclick="handlePlanClick('Adventure in the Himalayas')">View Plan</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Letyoube. All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
